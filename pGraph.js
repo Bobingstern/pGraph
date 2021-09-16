@@ -41,7 +41,7 @@ class pGraph{
       this.add(arr[i])
     }
   }
-  removeArray(rr){
+  removeArray(arr){
     for (var i=0;i<arr.length;i++){
       if (arr[i] >= 0 && arr[i] < this.points.length-1){
         this.remove(arr[i])
@@ -55,6 +55,9 @@ class pGraph{
   
   
   remove(i){
-    this.points.splice(i, 1)
+    if (i >= 0 && i<this.points.length){
+      this.points.splice(i, 1)
+    }
+    
   }
 }
