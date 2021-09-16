@@ -29,7 +29,7 @@ Show graph:
 
 Example
 
-```
+```js
 let g;
 function setup() {
   createCanvas(400, 400);
@@ -51,4 +51,5 @@ function keyPressed(){
   }
 }
 ```
+[Here](https://editor.p5js.org/25apatel/sketches/6tn77EFoC) is a live example on p5js if you want to try it yourself
 
