@@ -6,6 +6,7 @@ class pGraph{
     this.inc;
     this.points = []
     this.greatestY = 0;
+    this.lowestY = -1;
   }
   show(){
     fill(255)
@@ -16,14 +17,15 @@ class pGraph{
         push()
         translate(this.left.x, this.left.y)
         
-        circle(i*this.inc, map(this.points[i], 0, this.greatestY, 0, this.size.y), 1)
+        circle(i*this.inc, map(this.points[i], this.lowestY, this.greatestY, 0, this.size.y), 1)
         if (i > 0){
-          line(i*this.inc, map(this.points[i], 0, this.greatestY, 0, this.size.y), (i-1)*this.inc, map(this.points[i-1], 0, this.greatestY, 0, this.size.y))
+          line(i*this.inc, map(this.points[i], this.lowestY, this.greatestY, 0, this.size.y), (i-1)*this.inc, map(this.points[i-1], this.lowestY, this.greatestY, 0, this.size.y))
         }
         pop()
         
         
       }
+      
     }
   }
   add(y){
@@ -31,8 +33,11 @@ class pGraph{
     if (y > this.greatestY){
       this.greatestY = y
     }
+    if (y < this.lowestY){
+      this.lowestY = y
+    }
     if (y <= 0){
-      y = 0.01;
+      //y = 0.01;
     }
     this.points.push(y)
   }
