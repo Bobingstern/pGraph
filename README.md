@@ -24,7 +24,7 @@ g.removeArray([1, 2, 3, 4])
 g.show()
 ```
 
-Example (You can also find it in [sketch.js](https://github.com/Bobingstern/pGraph/blob/main/sketch.js))
+Example (You can also find it in [sketch.js](https://github.com/Bobingstern/pGraph/blob/main/sketch.js) or an online example [here](https://editor.p5js.org/25apatel/sketches/6tn77EFoC))
 
 ```js
 let g;
