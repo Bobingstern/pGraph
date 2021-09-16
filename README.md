@@ -9,25 +9,22 @@ Simply download the ``pGraph.js`` and put it into you project folder. Make sure 
 
 Once you've downloaded the file you start using it easily.
 
-Create a new graph:
-```let g = new pGraph(x, y, width, height)```
+```js
+// Create a new graph
+let g = new pGraph(x, y, width, height)
+// Add a number
+g.add(num)
+// Remove a number by index
+g.remove(index)
+// Add an array of numbers
+g.addArray([1, 2, 3, 4])
+// Remove an array of numbers
+g.removeArray([1, 2, 3, 4])
+// Show the graph
+g.show()
+```
 
-Add item:
-```g.add(num)```
-
-Remove by index: 
-```g.remove(index)```
-
-Add Array:
-```g.addArray([1, 2, 3, 4])```
-
-Remove array
-```g.removeArray([1, 2, 3, 4])```
-
-Show graph:
-```g.show()```
-
-Example
+Example (You can also find it in [sketch.js](https://github.com/Bobingstern/pGraph/blob/main/sketch.js) or an online example [here](https://editor.p5js.org/25apatel/sketches/6tn77EFoC))
 
 ```js
 let g;
@@ -51,5 +48,4 @@ function keyPressed(){
   }
 }
 ```
-[Here](https://editor.p5js.org/25apatel/sketches/6tn77EFoC) is a live example on p5js if you want to try it yourself
 
