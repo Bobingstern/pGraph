@@ -11,6 +11,14 @@ class pGraph{
   show(){
     fill(255)
     rect(this.left.x, this.left.y, this.size.x, this.size.y)
+    push()
+    textSize(this.size.x/30)
+    stroke(0)
+    fill(0)
+    text(round(this.greatestY), this.left.x-this.size.x/30, this.left.y+10)
+    text(round(this.lowestY), this.left.x-this.size.x/30, this.left.y+this.size.y)
+    pop()
+    
     if (this.points.length > 0){
       this.inc = this.size.x/this.points.length
       for (var i=0;i<this.points.length;i++){
@@ -62,6 +70,16 @@ class pGraph{
   remove(i){
     if (i >= 0 && i<this.points.length){
       this.points.splice(i, 1)
+    }
+    
+  }
+  trim(factor){
+    if (factor > 0 && factor < this.points.length-1){
+      for (var i=this.points.length-1;i>=0;i--){
+        if (i%factor == 0){
+          this.points.splice(i, 1)
+        }
+      }
     }
     
   }
