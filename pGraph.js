@@ -15,10 +15,9 @@ class pGraph{
     textSize(this.size.x/30)
     stroke(0)
     fill(0)
-    text(round(this.greatestY), this.left.x-this.size.x/30, this.left.y+10)
-    text(round(this.lowestY), this.left.x-this.size.x/30, this.left.y+this.size.y)
+    //text(round(this.greatestY), this.left.x-this.size.x/30, this.left.y+10)
+    //text(round(this.lowestY), this.left.x-this.size.x/30, this.left.y+this.size.y)
     pop()
-    
     if (this.points.length > 0){
       this.inc = this.size.x/this.points.length
       for (var i=0;i<this.points.length;i++){
@@ -36,8 +35,8 @@ class pGraph{
       
     }
   }
-  add(y){
-
+  add(z){
+    let y = -z
     if (y > this.greatestY){
       this.greatestY = y
     }
